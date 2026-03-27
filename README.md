@@ -40,3 +40,13 @@ delete is used to delete a resource and patch is used for the update a resource
 and learn about the different status code for the different methods 
 learn the export the file data to the another file module exports 
 learn about the params that is used to 
+
+Day 5 - 
+
+toay i repaeted the proces fro the day 1 to 4 and learn new thing like -
+learn about the status code 
+done the setup of mongodb atlas and compass 
+created a database 
+
+
+
