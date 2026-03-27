@@ -26,17 +26,26 @@ Day 3 -
 
 Today I repeated the tasks that done on the day 1 and the day 2 
 and new learning is -
+
 I learn about the request and responce 
+
 req.body can not be read or understand by the express so that we have to create the middle ware for it we use the express.json() middleware for it 
+
 i learn about the post API that is used to  Creates a new resource. The request body contains the data for the new resource.
 
 
 Day 4 - 
 
-Today I repeated the learning of the all previous day 1 to 3 and add some new learning to it that is 
+Today I repeated the learning of the all previous day 1 to 3 and add some new learning to it that is -
+
 learn about the script we can add the script on the json package we can write the shorter version of the any bash script like i write "npx nodemon server.js" to "dev"
+
 learn about the different method like delete and patch 
-delete is used to delete a resource and patch is used for the update a resource 
-and learn about the different status code for the different methods 
+
+delete is used to delete a resource and patch is used for the update a resource and learn about the different status code for the different methods 
+
 learn the export the file data to the another file module exports 
+
 learn about the params that is used to 
+
+
