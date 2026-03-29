@@ -54,3 +54,11 @@ toay i repaeted the proces fro the day 1 to 4 and learn new thing like -
 learn about the status code 
 done the setup of mongodb atlas and compass 
 created a database 
+
+
+Day 6 - 
+
+Today I learn about the how to connect the cluster and the database server 
+and learn about the .env file how we can hide our importent data files or links using the gitignore 
+
+
