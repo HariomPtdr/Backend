@@ -1,64 +1,188 @@
-# Backend-
-This is my Day-by-day Backend learning
+# Backend Learning Journey
 
-day1 -
+This repository documents my day-by-day backend learning progress using **Node.js** and **Express.js**, progressing from basic server setup to MongoDB integration.
 
-just learn about the how the server is created
-created first server 
-first require the express in my folder 
-then run the express on the folder 
+---
 
-then my first server is running  on the port 3000
+## 📁 Day1 - Basic Server Setup
 
+**Dependencies:** `express ^5.2.1`
 
-Day2 - 
+**Files:**
+- `app.js` - Basic Express server listening on port 3000
+- `package.json`
 
-today i repeated the whole activity that i done on the day1 and 
-today i learn new that is get method of the Api just using the post man 
+**Learning:** First server creation, requiring Express, running on port 3000
 
-get is the method that is used to new Retrieves a resource or a list of resources.
-Should not modify data on the server.
+---
 
-new Retrieves create karne ke liye 
+## 📁 Day2 - GET Method & Static Files
 
+**Dependencies:** `express ^5.2.1`, `nodemon ^3.1.14`
 
-Day 3 - 
+**Files:**
+- `server.js` - Express server with GET routes (`/` and `/users`)
+- `about.html` - Static HTML file
+- `package.json`
 
-Today I repeated the tasks that done on the day 1 and the day 2 
-and new learning is -
+**Learning:** GET method to retrieve resources, status codes (200), testing with Postman, returning JSON data
 
-I learn about the request and responce 
+---
 
-req.body can not be read or understand by the express so that we have to create the middle ware for it we use the express.json() middleware for it 
+## 📁 Day3 - POST Method & Middleware
 
-i learn about the post API that is used to  Creates a new resource. The request body contains the data for the new resource.
+**Dependencies:** `express ^5.2.1`
 
+**Files:**
+- `server.js` - Express server with POST and GET endpoints for `/notes`
 
-Day 4 - 
+**Key Concepts:**
+```javascript
+app.use(express.json())  // Middleware to parse JSON body
+const notes = []  // In-memory storage
+```
 
-Today I repeated the learning of the all previous day 1 to 3 and add some new learning to it that is -
+**Learning:** POST method (creates resources), `express.json()` middleware for `req.body`, request/response handling
 
-learn about the script we can add the script on the json package we can write the shorter version of the any bash script like i write "npx nodemon server.js" to "dev"
+---
 
-learn about the different method like delete and patch 
+## 📁 Day4 - DELETE, PATCH & Scripts
 
-delete is used to delete a resource and patch is used for the update a resource and learn about the different status code for the different methods 
+**Dependencies:** `express ^5.2.1`
 
-learn the export the file data to the another file module exports 
+**Files:**
+- `server.js` - Entry point
+- `src/app.js` - Main application with full CRUD operations
+- `package.json`
 
-learn about the params that is used to 
+**Scripts:** `"dev": "npx nodemon server.js"`
 
-Day 5 - 
+**Features:**
+- POST `/notes` - Create (201)
+- GET `/notes` - Read (200)
+- DELETE `/notes/:index` - Delete (204)
+- PATCH `/notes/:index` - Update (200)
 
-toay i repaeted the proces fro the day 1 to 4 and learn new thing like -
-learn about the status code 
-done the setup of mongodb atlas and compass 
-created a database 
+**Learning:** DELETE and PATCH methods, URL params (`req.params`), status codes, module.exports, npm scripts
 
+---
 
-Day 6 - 
+## 📁 Day5 - Status Codes & MongoDB Setup
 
-Today I learn about the how to connect the cluster and the database server 
-and learn about the .env file how we can hide our importent data files or links using the gitignore 
+**Dependencies:** `express ^5.2.1`
 
+**Files:**
+- `server.js` - Entry point
+- `src/app.js` - Same CRUD operations as Day4
 
+**Learning:** HTTP status codes in detail, MongoDB Atlas setup, MongoDB Compass setup, database creation
+
+---
+
+## 📁 Day6 - MongoDB Connection & Environment Variables
+
+**Dependencies:** `express ^5.2.1`, `mongoose ^9.3.3`
+
+**Files:**
+- `server.js` - Server with MongoDB connection
+- `src/app.js` - Basic Express app export
+- `.env` - Contains MongoDB URI (not committed)
+- `package.json`
+
+**Scripts:** `"dev": "npx nodemon server.js"`
+
+**Learning:** Connecting to MongoDB cluster, `.env` files for hiding sensitive data, `dotenv` package, Mongoose connection
+
+---
+
+## 📁 Day7 - MongoDB Models & Database Operations
+
+**Dependencies:** `express ^5.2.1`, `mongoose ^9.3.3`
+
+**Files:**
+- `server.js` - Server with database connection
+- `src/app.js` - Routes with async Mongoose operations
+- `src/config/database.js` - Database connection logic
+- `src/Models/notes.model.js` - Mongoose schema/model
+- `.env` - MongoDB URI (not committed)
+- `package.json`
+
+**Project Structure:**
+```
+Day7/
+├── server.js
+├── .env
+├── package.json
+└── src/
+    ├── app.js
+    ├── config/
+    │   └── database.js
+    └── Models/
+        └── notes.model.js
+```
+
+**Schema (notes.model.js):**
+```javascript
+{
+  title: String,
+  description: String
+}
+```
+
+**Features:**
+- POST `/notes` - Creates notes in MongoDB
+- GET `/notes` - Fetches all notes from MongoDB
+- Uses async/await for database operations
+
+**Learning:** Mongoose models, database schemas, organized project structure (config/, Models/), storing data persistently
+
+---
+
+## 📁 postman/ & .postman/
+
+**Purpose:** Postman API testing collections and configurations
+- Contains mocks, globals, specs, environments, collections, flows
+
+---
+
+## Progress Summary
+
+| Day | Topic |
+|-----|-------|
+| Day 1 | Basic Express server |
+| Day 2 | GET method, JSON responses |
+| Day 3 | POST method, middleware |
+| Day 4 | DELETE, PATCH, URL params, scripts |
+| Day 5 | Status codes, MongoDB setup |
+| Day 6 | MongoDB connection, environment variables |
+| Day 7 | Mongoose models, persistent storage |
+
+---
+
+## How to Run
+
+Each day's folder can be run independently:
+
+```bash
+cd DayX
+npm install
+npm run dev    # Days 4-7 (uses nodemon)
+# OR
+node server.js # Days 1-3
+```
+
+---
+
+## Tech Stack
+
+- **Node.js** - Runtime environment
+- **Express.js** - Web framework
+- **MongoDB** - Database
+- **Mongoose** - MongoDB ODM
+- **Postman** - API testing
+
+---
+
+## Author
+
+Hariom
